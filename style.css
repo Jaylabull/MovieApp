@@ -60,6 +60,7 @@ main
     position: relative;
     overflow: hidden;
     border-radius: 3px;
+    padding-block: 0 10px;
 }
 
 .movie img
@@ -80,29 +81,34 @@ main
 .movie-info h3
 {
     margin-top: 0;
+    font-size: 18px;
 }
 
-.movie-info span
+span.green
 {
+    color: rgb(144, 238, 144);
     background-color: var(--primary-color);
     padding: .25rem 0.5rem;
     border-radius: 3px;
     font-weight: bold;
 }
 
-.movie-info span.green
-{
-    color: rgb(144, 238, 144);
-}
-
-.movie-info span.orange
+span.orange
 {
     color: rgb(255, 165, 0);
+    background-color: var(--primary-color);
+    padding: .25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
 }
 
-.movie-info span.red
+span.red
 {
     color: rgb(255, 0, 0);
+    background-color: var(--primary-color);
+    padding: .25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
 }
 
 .overview

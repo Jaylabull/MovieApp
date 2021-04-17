@@ -30,21 +30,24 @@ function showMovies (movies)
         const movieElement = document.createElement('div');
         movieElement.classList.add('movie');
         movieElement.innerHTML = ` 
+        <div class = "movie">
             <img src="${IMG_PATH + poster_path}" alt="${title}>
             <div class = "movie-info">
-                <h3>Movie Title</h3>
-                <span class = "${getClassByRate(vote_average)}"> ${vote_average}</span>
+                <h3>${title}</h3>
+                <span class = "${getClassRate(vote_average)}"> ${vote_average}</span>
             </div>
             <div class="overview">
                 <h3>Overview</h3>
                 ${overview}
-            </div>`
+            </div>
+        </div>`
+        
 
         main.appendChild(movieElement)
     })
 }
-
-function getClassByRate(vote){
+ 
+function getClassRate(vote){
     
     if(vote >= 8 ){
         return "green"
