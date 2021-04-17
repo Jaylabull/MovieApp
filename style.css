@@ -35,12 +35,12 @@ header
     color: rgb(255, 255, 255);
 }
 
-.search::-moz-placeholder
+.search::placeholder
 {
-    color: #7378c5;
+    color: rgba(250, 250, 250, 0.623);
 }
 
-.search::focus
+.search:focus
 {
     outline: none;
     background-color: var(--primary-color);
@@ -97,7 +97,7 @@ main
 
 .movie-info span.orange
 {
-    color: #ffa500;
+    color: rgb(255, 165, 0);
 }
 
 .movie-info span.red
@@ -107,7 +107,7 @@ main
 
 .overview
 {
-    background-color: white;
+    background-color: rgb(255, 237, 211);
     padding: 2rem;
     position: absolute;
     left: 0;
