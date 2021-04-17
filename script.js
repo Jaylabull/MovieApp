@@ -14,14 +14,15 @@ getMovies(API_URL)
 async function getMovies (url) {
 
     const resp = await fetch(url);
-    const data = await resp.json();
-
+    const data = await resp.json(); 
+    // ^ gives actual data 
     showMovies(data.results);
 }
 
+//Grabs movie info from API
 function showMovies (movies) 
 {
-    MediaDeviceInfo.innerHTML = '';
+    main.innerHTML = '';
 
     movies.forEach(movie => {
         const { title, poster_path, vote_average, overview} = movie;
@@ -55,11 +56,13 @@ function getClassByRate(vote){
 }
 
 form.addEventListener('submit', (e) => {
+
     e.preventDefault()
 
     const searchTerm = search.value;
 
     if(searchTerm && searchTerm !== ''){
+
         getMovies(SEARCH_API + searchTerm);
 
         search.value = '';
